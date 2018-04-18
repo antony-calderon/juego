@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>registro usuarios</title>
+	<link rel="stylesheet" href="../css/nuevo_usuario.css">
+</head>
+<body>
+	<section class="titulo">
+		
+		<h1>Mental War</h1>
+
+	</section>
+		
+		<form action="../php/nuevo_usuario.php" method="POST" enctype="multipart/form-data">
+			<h2>registro</h2>
+			<section>
+				<input type="text" placeholder="usuario juego" name="username" required><br>
+			</section>
+            <section>
+				<input type="password" placeholder="ingrese password" name="password"><br>
+			</section>
+			<section>
+				<input type="password" placeholder="confirme password" name="password2"><br>
+			</section>
+			<section>
+				<input type="email" placeholder="ingrese su correo" name="email"><br>
+			</section>
+			<section>
+				<input type="date" name="birthdate"><br>
+			</section>
+			<section>
+				<input type="file" name="imagen"><br>
+			</section>
+			<section>
+				<button type="submit" value="registrar">registrarse</button><br>
+			</section>
+		</form>
+	
+</body>
+</html>

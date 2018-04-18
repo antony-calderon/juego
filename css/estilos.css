@@ -1,0 +1,325 @@
+*
+{
+
+	margin: 0;
+	padding: 0;
+
+
+}
+
+header
+{
+	width: 100%;
+	background: black;
+	height: 85px;
+	position:fixed;
+}
+
+.config
+{
+	width: 70%;
+	height: 70px;
+	margin: auto;
+}
+
+.logo
+{
+	width: 30%;
+	height: 70px;
+	float: left;
+	padding-top: 5px;
+	font-family: udec;
+	/*background: gray;*/
+}
+
+nav
+{
+	width: 70%;
+	height: 70px;
+	float: left;
+	text-align: right;
+	padding-top: 20px;
+}
+nav ul li    
+{
+	display: inline;
+}
+
+nav ul li a
+{
+	color: white;
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-left: 15px;
+	font-weight: bold;
+	letter-spacing: 5px;
+	font-family: udec;
+}
+
+nav ul li a:hover
+{
+	color: red;
+}
+
+.logo img
+{
+	width: 70px;
+	height: 70px;
+
+}
+
+@font-face   /*importando la fuente que descargamos de google fonts*/
+{
+	font-family: udec;
+	src:url(fuentes/Raleway-Regular.ttf);
+}
+
+.mentalwar p
+{
+	height: 10px;
+	width: 80px;
+	font-family: udec;
+	font-size: 14px;
+	color: white;
+	text-align: left;
+}
+
+.nosotros p
+{
+	font-family: udec;
+	font-size: 40px;
+	text-align: left;
+	background: linear-gradient(to bottom right,white,black);
+
+}
+
+.parrafo1_nosotros
+{
+    background: radial-gradient(#DB04F5, #82458A, #0B0A0B);
+	display: flex;
+}
+
+.parrafo1_nosotros p
+{
+	margin-top: 40px;
+}
+
+.parrafo1_nosotros ul img
+{
+	width: 250px;
+	height: 260px;
+	margin-top: 10px;
+	margin-left: 230px;
+}
+
+.parrafo_1
+{
+	font-size: 20px;
+	margin-left: 150px;
+	font-family: udec;
+	color: white;
+}
+
+.parrafo2_nosotros
+{
+	display: flex;	
+	background: radial-gradient(#DB04F5, #82458A, #0B0A0B);
+}
+
+.parrafo2_nosotros p
+{
+	margin-top: 70px;
+}
+
+.parrafo2_nosotros ul img
+{
+	width: 250px;
+	height: 300px;
+	margin-top: 10px;
+	margin-left: 140px;
+	
+}
+
+.parrafo_2
+{
+	font-size: 20px;
+	margin-left: 150px;
+	font-family: udec;
+}
+
+.multimedia p
+{
+	font-family: udec;
+	font-size: 40px;
+	text-align: right;
+	background: linear-gradient(to bottom right,black,white);	
+}
+
+
+
+
+
+.slider
+{	
+	text-align: center;
+	background: linear-gradient(to bottom right,black,white, black);	 
+}
+
+.imagenes_slider img 
+{
+    margin-left: auto;
+    margin-right: auto;	
+}
+
+.imagenes_slider img 
+{
+    
+	width: 800px;
+	height:400px;	
+}
+
+.botones_slider
+{
+	background: red;
+}
+
+
+
+
+
+
+
+
+
+.multimedia_2
+{
+	background: #424242;
+	display: flex;
+	justify-content: center;
+
+
+}
+
+.multimedia_2 ul li
+{
+	list-style: none;
+}
+
+.multimedia_2 ul li img
+{
+	width: 300px;
+	height: 200px;
+	border-radius: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	
+}
+
+.ranking
+{
+	font-family: udec;
+	font-size: 40px;
+	text-align: center;
+	background: linear-gradient(to bottom right,white,black);
+}
+
+.puntuacion 
+{
+
+	font-size: 30px;
+    
+    background: black;
+}
+
+.puntuacion table
+{
+
+	color: white;
+	margin: auto;
+	border-collapse: collapse;
+}
+
+.puntuacion tr td
+{
+	border: 10px solid black;
+	font-family: udec;
+}
+
+.puntuacion tr th
+{
+	border: 1px solid black;
+	font-family: udec;
+}
+
+/*.registro
+{
+    font-family: udec;
+	font-size: 40px;
+	text-align: center;
+	background: linear-gradient(to bottom right,black,white);
+}
+
+.datos
+{
+	background: red;
+}
+
+.datos input
+{
+	height: 20px;  
+    width: 220px;  
+    padding: 5px 8px;
+	box-sizing: content-box;
+}
+
+.datos label
+{
+	width: 150px;  
+    margin-top: 3px;  
+    display: inline-block;  
+    float: left;  
+    padding: 3px;
+}*/
+
+/*.ingreso
+{
+	font-family: udec;
+	font-size: 40px;
+	text-align: center;
+	background: linear-gradient(to bottom right,white,black);
+}*/
+
+/*.entrar
+{
+	background: blue;
+}
+
+.entrar input
+{
+	color: white;
+	background-color: yellow;
+	border:2px solid red;
+	border-radius: 8px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	height: 30px;  
+    width: 50%;  
+    padding: 5px 8px;
+	box-sizing: border-box;
+}
+
+.entrar label
+{
+	width: 150px;  
+    margin-top: 3px;  
+    display: inline-block;  
+    float: left;  
+    padding: 3px;
+}*/
+
+
+
+
+
