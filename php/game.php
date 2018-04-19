@@ -11,14 +11,28 @@
 }
 ?>
 
+<style>
+   *{
+   background: linear-gradient(to left,black,white,black);
+   }
+   h1{
+      color: black;
+      text-align: center;
+   }
+   img{
+      align-content: center;
+   }
+   a{
+      font-size: 30px;
+      margin-left: 85%;
+   }
+   
+</style>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
 <body>
-   <font color="green">  <h1>bienvenido al juego</h1></font>
+
+   <h1>Bienvenido al juego</h1>
+
 
 <?php
 
@@ -30,14 +44,19 @@
    $sql="SELECT avatar FROM usuario WHERE username = '$a'";
    $stmt=$consulta->prepare($sql);
    $stmt->execute();
+?>
+   <center>
+<?php
    while($fila=$stmt->fetch())
    {
       echo '<img src='.$fila['avatar'].' width="30%">';
    }
-
 ?>
+   </center>
 
-   <section> aca va el juego</section>
+
+   <br>
+   <center><section> aca va el juego</section></center>
    <br>
    <br>
    <a href = "../php/cerrar_sesion.php"> cerrar sesion </a>

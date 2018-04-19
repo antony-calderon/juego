@@ -3,7 +3,7 @@ session_start();
 ?>
 
 
-<body style="background: linear-gradient(to right,black,white)">
+<body style="background: linear-gradient(to left,black,white,black)">
 <?php 
 $bd = "base_juego";
 $user = "root";
@@ -38,8 +38,10 @@ $result = $conexion->query($sql);
 	 		//sesion start sesion expire
 	        
 	 		echo "Bienvenido!!! " .$username;
+
 	?>
-	<img src="../imagenes/imagenes slider/go.jpg">
+	<br>
+	<img src="../imagenes/imagenes slider/go.jpg" width="650">
 	<?php
 	 		echo "<br> <a href = ../php/game.php?id=".$username.">INGRESE AL JUEGO </a>";
 
