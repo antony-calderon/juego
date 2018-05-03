@@ -1,4 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"/></script>
+
+
 <link rel="stylesheet" href="../css/nuevo_usuario.css"> <!--trae estilos css-->
+</head>
 <body>
 <?php
 	//llamar a conexion 
@@ -32,10 +48,20 @@
 
 			if ($stmt)
 			{
-				echo "Datos insertados";
+				
 ?>
+			<script language="JavaScript" type="text/javascript">
+					swal({  title: "Informacion Enviada",   
+					        text: "Datos enviados correctamente.",   
+					        type: "success",   
+					        confirmButtonText: "Continuar" },
+					function () 
+					{
+					    window.location.href = '../index.html';
+					});
 
-			<a href = "../html/ingreso.html"> Ingresar </a>
+    		</script>
+			
 <?php				
 				
 			}
