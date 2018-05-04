@@ -5,7 +5,7 @@
 }
 body
 {
-	background: url(../imagenes/fondo.jpg);
+	background: url(../imagenes/ojo.jpg);
 	background-size:cover;
 	/*background: #1C0C1E;*/
 }
@@ -17,11 +17,9 @@ body
 }
 form
 {
-	background: #333333;
+	
+
 	width: 360px;
-	border: 1px solid #4e4d4d;
-	border-radius: 3px;
-	box-shadow: inset 0 0 35px black;
 	margin: 15px auto;  /*centra el formulario*/
 }
 form h2

@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"/></script>
+
+
+<link rel="stylesheet" href="../css/nuevo_usuario.css"> <!--trae estilos css-->
+</head>
+
 <?php 
 session_start();
 ?>
@@ -38,12 +56,25 @@ $result = $conexion->query($sql);
 	 		//sesion start sesion expire
 	        
 	 		echo "Bienvenido!!! " .$username;
-
 	?>
+
+
+		<script language="JavaScript" type="text/javascript">
+					swal({  title: "Credenciales correctas",   
+					        text: "Ingrese al panel de control",   
+					        type: "success",   
+					        confirmButtonText: "Continuar" },
+					        
+					function () 
+					{
+					    window.location.href = '../php/game.php';
+					});
+
+    		</script>
 	<br>
-	<img src="../imagenes/imagenes slider/go.jpg" width="650">
+	<!--img src="../imagenes/imagenes slider/go.jpg" width="650"-->
 	<?php
-	 		echo "<br> <a href = ../php/game.php?id=".$username.">INGRESE AL JUEGO </a>";
+	 		//echo "<br> <a href = ../php/game.php?id=".$username.">INGRESE AL JUEGO </a>";
 
 	 	} 	else{
 	 		echo "sus credenciales no coinciden o no existen";

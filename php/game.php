@@ -16,16 +16,17 @@
 <style>
    body{
    background: linear-gradient(to left,black,white,black);
+   background: url(../imagenes/uni.jpg);
    }
    h1{
-      color: black;
+      color: white;
       text-align: center;
    }
    img{
       align-content: center;
    }
    a{
-      color: black;
+      color: white;
       font-size: 30px;
       margin-left: 85%;
    }  

@@ -52,12 +52,12 @@
 ?>
 			<script language="JavaScript" type="text/javascript">
 					swal({  title: "Informacion Enviada",   
-					        text: "Datos enviados correctamente.",   
+					        text: "Registro exitoso!!.",   
 					        type: "success",   
-					        confirmButtonText: "Continuar" },
+					        confirmButtonText: "ingresar" },
 					function () 
 					{
-					    window.location.href = '../index.html';
+					    window.location.href = '../html/ingreso.html';
 					});
 
     		</script>
