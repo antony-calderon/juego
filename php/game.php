@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Panel</title>
+      <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+      <link rel="stylesheet" type="text/css" href="../css/index.css" />
+   </head>
+
 <?php 
    require_once('../php/conexion.php'); //llama a la conexion
    session_start();
@@ -7,7 +15,7 @@
    {
    	echo "no tiene permisos para ingresar <br>";
    	echo "<br> <a href = ../html/ingreso.html>vuelva a logueo</a>";
-   		echo "<br> <a href = ../html/nuevo_usuario.html>registro</a>";
+   	echo "<br> <a href = ../html/nuevo_usuario.html>registro</a>";
    	exit;
    }
 ?>
@@ -15,7 +23,7 @@
 
 <style>
    body{
-   background: linear-gradient(to left,black,white,black);
+  
    background: url(../imagenes/uni.jpg);
    }
    h1{
@@ -34,21 +42,19 @@
 
 
 <body>
-   <h1>Bienvenido al juego</h1>
+<section>
 
-
-<?php
-   $a = $_GET['id'];
-   echo $a;
-
-   $conn=new conexion(); //clase conexion
-   $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
-   $sql="SELECT avatar FROM usuario WHERE username = '$a'";
-   $stmt=$consulta->prepare($sql);
-   $stmt->execute();
-?>
-
-
+   <h1>PANEL DE CONTROL</h1>
+   <?php
+         $a = $_GET['id'];
+         echo $a;
+         $conn=new conexion(); //clase conexion
+         $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
+         $sql="SELECT avatar FROM usuario WHERE username = '$a'";
+         $stmt=$consulta->prepare($sql);
+         $stmt->execute();
+   ?>
+   
    <center>
       <?php
          while($fila=$stmt->fetch())
@@ -60,16 +66,15 @@
 
 
 
-<?php
-   $a = $_GET['id'];
-   echo $a;
-
-   $conn=new conexion(); //clase conexion
-   $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
-   $sql="SELECT username, total FROM puntaje order by total desc";
-   $stmt=$consulta->prepare($sql);
-   $stmt->execute();
-?>
+   <?php
+         $a = $_GET['id'];
+         echo $a;
+         $conn=new conexion(); //clase conexion
+         $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
+         $sql="SELECT username, total FROM puntaje order by total desc";
+         $stmt=$consulta->prepare($sql);
+         $stmt->execute();
+   ?>
 
 
    <center>
@@ -80,14 +85,25 @@
          }
       ?>
    </center>
+</section>
 
-   <br>
+<!-- CHAT BOOT-->
+
+<section>
+
+      <h1 class="title">Panel-bot</h1>
+         <article class="chat"></article>
+         <article class="busy"></article>
+         <article class="input">
+            <input type="text" placeholder="Habla conmigo!!!!" />
+            <a>Enviar</a>
+         </article>
    
-   <center><section>aca va el juego</section></center>
-   
-   <br><br><br><br><br>
-   
-   <a href = "../php/cerrar_sesion.php"> cerrar sesion </a>
+</section>
+ <a href = "../php/cerrar_sesion.php"> cerrar sesion </a>
+<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../js/chat-bot.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
 </body>
 </html>
 

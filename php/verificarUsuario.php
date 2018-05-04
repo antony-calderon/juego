@@ -56,24 +56,23 @@ $result = $conexion->query($sql);
 	 		//sesion start sesion expire
 	        
 	 		echo "Bienvenido!!! " .$username;
-	?>
+	
 
-
-		<script language="JavaScript" type="text/javascript">
-					swal({  title: "Credenciales correctas",   
-					        text: "Ingrese al panel de control",   
-					        type: "success",   
-					        confirmButtonText: "Continuar" },
+		echo "<script language= 'JavaScript' type='text/javascript'>
+					swal({  title: 'Credenciales correctas',   
+					        text: 'Ingrese al panel de control',   
+					        type: 'success',   
+					        confirmButtonText: 'Continuar' },
 					        
 					function () 
 					{
-					    window.location.href = '../php/game.php';
+					    window.location.href = '../php/game.php?id=".$username."';
 					});
 
-    		</script>
-	<br>
-	<!--img src="../imagenes/imagenes slider/go.jpg" width="650"-->
-	<?php
+    		</script> 	<br>";
+
+	
+	
 	 		//echo "<br> <a href = ../php/game.php?id=".$username.">INGRESE AL JUEGO </a>";
 
 	 	} 	else{
