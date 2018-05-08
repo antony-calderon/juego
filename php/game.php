@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>Panel</title>
-      <link rel="stylesheet" type="text/css" href="../css/reset.css" />
-      <link rel="stylesheet" type="text/css" href="../css/index.css" />
-   </head>
+
 
 <?php 
    require_once('../php/conexion.php'); //llama a la conexion
@@ -31,13 +25,61 @@
       text-align: center;
    }
    img{
-      align-content: center;
+      position: absolute;
+      left: 12%;
+      top: 15%;
+      
    }
    a{
       color: white;
       font-size: 30px;
-      margin-left: 85%;
+      position: absolute;
+      top: 90%;
+      left: 85%;
    }  
+   .nose{
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      left: 45%;
+      top: 20%;
+   }
+   .nose1{
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      left: 45%;
+      top: 25%;
+   }
+   .nose2{
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      left: 45%;
+      top: 30%;
+   }
+    .nose3{
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      left: 45%;
+      top: 35%;
+   }
+
+   .boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+  }
+  .boton_personalizado:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
 </style>
 
 
@@ -45,9 +87,12 @@
 <section>
 
    <h1>PANEL DE CONTROL</h1>
+
+<!--***********************CONSULTA DE IMAGEN*************************-->
    <?php
          $a = $_GET['id'];
-         echo $a;
+         
+         echo'<div class="nose">'.'player:'.$a.'</div>';
          $conn=new conexion(); //clase conexion
          $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
          $sql="SELECT avatar FROM usuario WHERE username = '$a'";
@@ -55,55 +100,94 @@
          $stmt->execute();
    ?>
    
-   <center>
       <?php
          while($fila=$stmt->fetch())
          {
             echo '<img src='.$fila['avatar'].' width="30%">';
          }
       ?>
-   </center>
 
+ <!--***********************CONSULTA PASSWORD*************************-->
 
-
-   <?php
+ <?php
          $a = $_GET['id'];
-         echo $a;
          $conn=new conexion(); //clase conexion
          $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
-         $sql="SELECT username, total FROM puntaje order by total desc";
+         $sql="SELECT password FROM usuario WHERE username = '$a'";
          $stmt=$consulta->prepare($sql);
          $stmt->execute();
    ?>
 
 
-   <center>
-      <?php
+     <?php
          while($fila=$stmt->fetch())
          {
-            echo ''.$fila['username'].' - '.$fila['total'].'<br>';
+            echo'<div class="nose1">'.'password:'.$fila['password'].'</div>';
          }
       ?>
-   </center>
+
+<!--***********************CONSULTA DE PUNTAJE************************-->
+  
+   <?php
+         $a = $_GET['id'];
+         $conn=new conexion(); //clase conexion
+         $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
+         $sql="SELECT total FROM puntaje order by total desc";
+         $stmt=$consulta->prepare($sql);
+         $stmt->execute();
+   ?>
+
+
+       <?php
+         while($fila=$stmt->fetch())
+         {
+            //echo ''.$fila['username'].' - '.$fila['total'].'<br>';
+            //echo'<divclass="nose">'.$fila['username'].'-'.$fila['total'].'</div>';
+
+         }
+      ?>  
+
+<!--***********************CONSULTA DE CORREO*************************-->
+
+ <?php
+         $a = $_GET['id'];
+         $conn=new conexion(); //clase conexion
+         $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
+         $sql="SELECT email FROM usuario WHERE username = '$a'";
+         $stmt=$consulta->prepare($sql);
+         $stmt->execute();
+   ?>
+
+
+     <?php
+         while($fila=$stmt->fetch())
+         {
+            echo'<div class="nose2">'.'correo:'.$fila['email'].'</div>';
+         }
+      ?>
+
+<!--***********************CONSULTA DE BIRTHDATE*************************-->
+
+ <?php
+         $a = $_GET['id'];
+         $conn=new conexion(); //clase conexion
+         $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
+         $sql="SELECT birthdate FROM usuario WHERE username = '$a'";
+         $stmt=$consulta->prepare($sql);
+         $stmt->execute();
+   ?>
+
+
+     <?php
+         while($fila=$stmt->fetch())
+         {
+            echo'<div class="nose3">'.'birthdate:'.$fila['birthdate'].'</div>';
+         }
+      ?>
+
 </section>
-
-<!-- CHAT BOOT-->
-
-<section>
-
-      <h1 class="title">Panel-bot</h1>
-         <article class="chat"></article>
-         <article class="busy"></article>
-         <article class="input">
-            <input type="text" placeholder="Habla conmigo!!!!" />
-            <a>Enviar</a>
-         </article>
-   
-</section>
- <a href = "../php/cerrar_sesion.php"> cerrar sesion </a>
-<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
-<script type="text/javascript" src="../js/chat-bot.js"></script>
-<script type="text/javascript" src="../js/index.js"></script>
+ <a class="boton_personalizado" href = "../php/cerrar_sesion.php"> cerrar sesion </a>
+ 
 </body>
 </html>
 

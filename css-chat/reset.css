@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background: radial-gradient(#66FFFF, #66CCFF, #210B61);
 }
 ol, ul {
 	list-style: none;
@@ -46,3 +47,33 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.img1{
+	position: absolute;
+	top: 40%;
+	left: 13%;
+}
+.img2{
+	position: absolute;
+	top: 40%;
+	left: 70%;
+
+}
+
+.boton_personalizado{
+	position: absolute;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    top: 65%;
+    left: 48%;
+  }
+  .boton_personalizado:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
