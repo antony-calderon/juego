@@ -2,7 +2,7 @@
 //$Score = $_POST['Score'];
 //$jugador = $_POST['jugador'];
 $Score ='500';
-$jugador ='antony';
+$jugador ='alex';
 
 
 require_once ('../php/conexion.php');

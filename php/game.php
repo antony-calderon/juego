@@ -66,6 +66,15 @@
       top: 35%;
    }
 
+   .nose4{
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      left: 45%;
+      top: 40%;
+   }
+
+
    .boton_personalizado{
     text-decoration: none;
     padding: 10px;
@@ -182,6 +191,25 @@
          while($fila=$stmt->fetch())
          {
             echo'<div class="nose3">'.'birthdate:'.$fila['birthdate'].'</div>';
+         }
+      ?>
+
+<!--***********************CONSULTA DE PUNTAJE*************************-->
+
+ <?php
+         $a = $_GET['id'];
+         $conn=new conexion(); //clase conexion
+         $consulta=$conn->conectar();//invoca la variable conexion, metodo conectar
+         $sql="SELECT total FROM puntaje WHERE username = '$a'";
+         $stmt=$consulta->prepare($sql);
+         $stmt->execute();
+   ?>
+
+
+     <?php
+         while($fila=$stmt->fetch())
+         {
+            echo'<div class="nose4">'.'puntaje:'.$fila['total'].'</div>';
          }
       ?>
 
