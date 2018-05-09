@@ -1,8 +1,8 @@
 <?php
-//$Score = $_POST['Score'];
-//$jugador = $_POST['jugador'];
-$Score ='500';
-$jugador ='alex';
+$Score = $_POST['Score'];
+$jugador = $_POST['jugador'];
+//$Score ='500';
+//$jugador ='antony';
 
 
 require_once ('../php/conexion.php');
@@ -23,7 +23,7 @@ if ($contar > 0) {
 	$stmt->execute();
 
 } else {
-	$sql = "INSERT INTO puntaje VALUES ('','$Score','$jugador')";
+	$sql = "INSERT INTO puntaje VALUES ('','$jugador','$Score')";
 	$stmt = $consulta->prepare($sql);
 	$stmt->execute();
 }
