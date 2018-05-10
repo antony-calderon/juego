@@ -89,13 +89,20 @@
     color: #1883ba;
     background-color: #ffffff;
   }
+  .entrar_juego
+  {
+    position: relative;
+    left: 45%;
+
+    
+  }
 </style>
 
 
 <body>
 <section>
 
-   <h1>PANEL DE CONTROL</h1>
+   <h1>PANEL DE CONTROL</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <!--***********************CONSULTA DE IMAGEN*************************-->
    <?php
@@ -211,9 +218,14 @@
          {
             echo'<div class="nose4">'.'puntaje:'.$fila['total'].'</div>';
          }
+
       ?>
 
+
 </section>
+
+ <h2><a class="entrar_juego" href="http://localhost:50000/">entra a jugar</a></h2>
+
  <a class="boton_personalizado" href = "../php/cerrar_sesion.php"> cerrar sesion </a>
  
 </body>
