@@ -92,9 +92,28 @@
   .entrar_juego
   {
     position: relative;
-    left: 45%;
+    left: 45%;    
+  }
 
-    
+  .boton_personalizado2{
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    position: absolute;
+    top:70%;
+    left:40%;
+    width: 20%;
+    height: 4%;
+  }
+  .boton_personalizado2:hover{
+    color: #1883ba;
+    background-color: #ffffff;
   }
 </style>
 
@@ -224,7 +243,7 @@
 
 </section>
 
- <h2><a class="entrar_juego" href="http://localhost:50000/">entra a jugar</a></h2>
+ <h2><a class="boton_personalizado2" href="http://localhost:50000/">comenzar la aventura</a></h2>
 
  <a class="boton_personalizado" href = "../php/cerrar_sesion.php"> cerrar sesion </a>
  

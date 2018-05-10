@@ -21,17 +21,31 @@ function chatBot() {
 			return "Hola player [^_^] ..!!!";
 
 		if(this.match('(como estas?|como estas|que tal|como va todo|que onda|que honda)'))
-			return ["todo esta excelente [^_^]", "en que podria ayudarte?"];
+			return ["todo esta excelente [^_^]", "en que podria ayudarte? tengo las siguientes opciones", "(1)reglas del juego","(2)contacto de mis padres","(3)informacion a cerca del juego","(3)quienes somos","(4)si estas aburrido te puedo dar un acertijo [^_^] "];
 
 		if(this.match('(reglas|me podrias decir las reglas?|cuales son las reglas|reglas por favor|reglas)'))
 			return ["las reglas son blablablbalblbalbalblablablalbalbalbalblablalbalblalballbalbalalba [^_^]"];
 		
-		if(this.match('(quien eres?|quien eres|que eres|que es|quien escribe?|quien escribe|eres humano?|eres un robot? eres un robot?|eres un fantasma?|)'))
+		if(this.match('(quien eres?|quien eres|que eres|que es|quien escribe?|quien escribe|eres humano?|eres un robot?|eres un fantasma?)'))
 			return ["soy un robot artificial el cual desea colaborar, para esto me han desarrollado mis padres [^_^]", "en que podria ayudarte?"];
         
         if(this.match('(que ofreces?|que opciones tienes|opciones|probabilidades|que me puedes dar?)'))
 			return ["te puedo decir: ", "reglas del juego","contacto de mis padres","informacion a cerca del juego","quienes somos","o si estas aburrido te puedo dar un acertijo [^_^] "];
 		
+		if(this.match('(1)'))
+			return ["las reglas son blablablbalblbalbalblablablalbalbalbalblablalbalblalballbalbalalba ","te puedo ayudar en algo mas? [^_^]"];
+		
+		if(this.match('(2)'))
+			return ["el contacto de mis padres es  ","te puedo ayudar en algo mas? [^_^]"];
+		
+		if(this.match('(3)'))
+			return ["el juego es bla ","te puedo ayudar en algo mas? [^_^]"];
+		if(this.match('(4)'))
+			return [" somos bla ","te puedo ayudar en algo mas? [^_^]"];
+
+		if(this.match('(5)'))
+			return [" tu acertijo es: ","te puedo ayudar en algo mas? [^_^]"];
+
 		if(this.match('^no+(\\s|!|\\.|$)'))
 			return "Espero no tengas mas inquietudes [^_^] ";
 		
