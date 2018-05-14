@@ -39,28 +39,28 @@
    }  
    .nose{
       position: absolute;
-      font-size: 30px;
+      font-size: 40px;
       color: white;
       left: 45%;
       top: 20%;
    }
    .nose1{
       position: absolute;
-      font-size: 30px;
+      font-size: 40px;
       color: white;
       left: 45%;
       top: 25%;
    }
    .nose2{
       position: absolute;
-      font-size: 30px;
+      font-size: 40px;
       color: white;
       left: 45%;
       top: 30%;
    }
     .nose3{
       position: absolute;
-      font-size: 30px;
+      font-size: 40px;
       color: white;
       left: 45%;
       top: 35%;
@@ -68,7 +68,7 @@
 
    .nose4{
       position: absolute;
-      font-size: 30px;
+      font-size: 40px;
       color: white;
       left: 45%;
       top: 40%;
@@ -114,7 +114,25 @@
   .boton_personalizado2:hover{
     color: #1883ba;
     background-color: #ffffff;
+
   }
+  .imagen{
+    position: absolute;
+    top: 60%;
+    height:10%;
+    width: 20%;
+    left: 28%;
+
+  }
+
+  .img1{
+    position: absolute;
+    width: 5%;
+    height: 10%;
+  }
+
+  }
+
 </style>
 
 
@@ -243,7 +261,13 @@
 
 </section>
 
- <h2><a class="boton_personalizado2" href="http://localhost:50000/">comenzar la aventura</a></h2>
+  <a class="imagen" href="http://localhost:50000/"><img src="../imagenes/play.png"></a>
+
+  <img class="img1" src="../imagenes/imagen logo/logo.jpg">
+
+ <!--img class="imagen" src="../imagenes/play.png"-->
+
+ <!--h2><a class="boton_personalizado2" href="http://localhost:50000/    ">comenzar la aventura</a></h2-->
 
  <a class="boton_personalizado" href = "../php/cerrar_sesion.php"> cerrar sesion </a>
  
@@ -252,3 +276,4 @@
 
 
 
+  
