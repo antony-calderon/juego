@@ -121,7 +121,7 @@
     top: 60%;
     height:10%;
     width: 20%;
-    left: 28%;
+    left: 34%;
 
   }
 
@@ -129,6 +129,21 @@
     position: absolute;
     width: 5%;
     height: 10%;
+    left: 25%;
+    top:0%
+
+  }
+  h1{
+    font-size: 350%;
+  }
+
+  .img2{
+
+    position: absolute;
+    width: 15%;
+    height: 40%;
+    top: 55%;
+    left: 20%;
   }
 
   }
@@ -264,6 +279,7 @@
   <a class="imagen" href="http://localhost:50000/"><img src="../imagenes/play.png"></a>
 
   <img class="img1" src="../imagenes/imagen logo/logo.jpg">
+  <img class="img2" src="../imagenes/zombie.png">
 
  <!--img class="imagen" src="../imagenes/play.png"-->
 
