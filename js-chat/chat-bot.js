@@ -25,13 +25,13 @@ function chatBot() {
 
         
 		if(this.match('(1)'))
-			return ["las reglas de MENTAL WAR son simples","no puedes caer porque la lava te matara","debes escalar rapidamente para evitar que las bombas hagan PUMMMM","entre mas puntos obtengas seras un mejor ganador","cada nivel es mas dificil, ten cuidado ","te podria ayudar en algo mas? [^_^]"];
+			return ["las reglas de MENTAL WAR son simples","saltas con flecha arriba y corres a los lados con las flecas de izquierda y derecha","no puedes caer porque la lava te matara","debes escalar rapidamente para evitar que las bombas hagan PUMMMM","entre mas puntos obtengas seras un mejor ganador","cada nivel es mas dificil, ten cuidado ","te podria ayudar en algo mas? [^_^]"];
 		
 		if(this.match('(2)'))
 			return ["mis padres son estudiantes de ingenieria de sistemas los cuales estan adquieriendo conocimientos para darme vida ","este mundo en el que estas sumergido es creado por ellos para tu diversion por supuesto","emmmm y yooo ummmm..."];
 		
 		if(this.match('(3)'))
-			return ["cuantos animales caben en una vallena?","(a)uffffff muchos!!!","(b)ninguno porque va llena :V","(c)jijuemil","(d) no se :o"];
+			return ["cuantos animales caben en una ballena?","(a)uffffff muchos!!!","(b)ninguno porque va llena :V","(c)jijuemil","(d) no se :o"];
 
 		if(this.match('(a|b|c|d)'))
 			return [" respondiste mal... o bien?? [^-^] no se pero bueno :v","te puedo colaborar en algo mas? [^_^]"];

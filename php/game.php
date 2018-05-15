@@ -273,8 +273,7 @@
 
       ?>
 
-
-</section>
+ </section>
 
   <a class="imagen" href="http://localhost:50000/"><img src="../imagenes/play.png"></a>
 
